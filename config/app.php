@@ -161,6 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        // Add on
+        Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Package Service Providers...
