@@ -163,6 +163,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         // Add on
         Barryvdh\Cors\ServiceProvider::class,
+        Laratrust\LaratrustServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -227,6 +229,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        // add on
+        'Laratrust'   => Laratrust\LaratrustFacade::class,
 
     ],
 

@@ -18,3 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Route Backend
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
+    // isi disini
+    Route::get('/', function () {
+        return "Hallo Admin";
+    });
+    Route::get('/home', function () {
+        return view('admin.dashboard');
+    });
+    Route::get('kategori', function () {
+        return "Hello Kategori";
+    });
+});
