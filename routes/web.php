@@ -15,21 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Route Backend
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth', 'role:admin']], function () {
     // isi disini
     Route::get('/', function () {
         return "Hallo Admin";
     });
-    Route::get('/home', function () {
-        return view('admin.dashboard');
+    Route::get('user', function () {
+        return "Halaman Menambah User";
     });
-    Route::get('kategori', function () {
-        return "Hello Kategori";
-    });
+    Route::resource('user', 'Backend\UserController');
 });
