@@ -26,8 +26,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth', 'r
     Route::get('/', function () {
         return "Hallo Admin";
     });
-    Route::get('user', function () {
-        return "Halaman Menambah User";
-    });
+    Route::resource('paket', 'Backend\PaketController');
     Route::resource('user', 'Backend\UserController');
 });

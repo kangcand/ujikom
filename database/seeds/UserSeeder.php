@@ -33,6 +33,13 @@ class UserSeeder extends Seeder
         $admin->save();
         $admin->attachRole($adminRole);
 
+        $candra = new User;
+        $candra->name = "Candra";
+        $candra->email = "candraherdiansyah14@gmail.com";
+        $candra->password = bcrypt('rahasia');
+        $candra->save();
+        $candra->attachRole($adminRole);
+
         // Membuat user member dengan role member
         $member = new User;
         $member->name = "Candra";

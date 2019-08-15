@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Route::group(['as' => 'api.'], function () {
 Route::resource('user', 'Api\UserController');
+Route::resource('paket', 'Api\PaketController');
 // });
