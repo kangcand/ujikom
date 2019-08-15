@@ -15,9 +15,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('DataTables/datatables.css') }}">
-    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('assets/DataTables/datatables.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/DataTables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sweetalert2/package/dist/sweetalert2.min.css')}}">
     
     @yield('css')
 </head>
@@ -99,8 +99,9 @@
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('DataTables/datatables.js') }}"></script>
-    <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
+    <script src="{{ asset('assets/DataTables/datatables.js') }}"></script>
+    <script src="{{ asset('assets/DataTables/datatables.min.js') }}"></script>
+    <script src="{{ asset('assets/sweetalert2/package/dist/sweetalert2.all.min.js') }}"></script>
     @yield('js')
     @stack('scripts')
 </body>

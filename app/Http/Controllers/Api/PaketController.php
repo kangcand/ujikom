@@ -42,7 +42,15 @@ class PaketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kp = new KriditPaket;
+        $kp->kode = $request->kode;
+        $kp->harga_cash = $request->harga_cash;
+        $kp->uang_muka = $request->uang_muka;
+        $kp->jumlah_cicilan = $request->jumlah_cicilan;
+        $kp->bunga = $request->bunga;
+        $kp->nilai_cicilan = $request->nilai_cicilan;
+        $kp->save();
+        return response()->json($kp, 200);
     }
 
     /**
